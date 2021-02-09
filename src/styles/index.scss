@@ -11,11 +11,11 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-.bigCounter{
+.counterStyle{
     text-align: center;
     background: black;
 }
-.bigCounter div{
+.counterStyle div{
     display: inline-block;
     font-size: 60px;
     line-height: 60px;
@@ -23,4 +23,8 @@
     color: white;
     padding: 10px;
     margin: 3px;
+}
+
+h1 {
+    margin-top: 50%;
 }

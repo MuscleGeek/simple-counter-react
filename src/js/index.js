@@ -10,15 +10,14 @@ import "../styles/index.scss";
 
 const Counter = properties => {
 	let numbArr = properties.number.split("");
-
 	const howManyZeros = 5 - numbArr.length;
 
-	for (let i = 0; i < howManyZeros; i++) {
+	for (let i = 0; i < howManyZeros.length; i++) {
 		numbArr.splice(0, 0, "0");
 	}
 
 	return (
-		<h1 className="d-flex bigCounter">
+		<h1 className="d-flex counterStyle justify-content-center">
 			<div className="styleClock">
 				<i className="far fa-clock" />
 			</div>
