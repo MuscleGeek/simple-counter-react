@@ -8,8 +8,34 @@ import "bootstrap";
 //include your index.scss file into the bundle
 import "../styles/index.scss";
 
-//import your own components
-import { Home } from "./component/home.js";
+const Counter = properties => {
+	let numbArr = properties.number.split("");
 
-//render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+	const howManyZeros = 5 - numbArr.length;
+
+	for (let i = 0; i < howManyZeros; i++) {
+		numbArr.splice(0, 0, "0");
+	}
+
+	return (
+		<h1 className="d-flex bigCounter">
+			<div className="styleClock">
+				<i className="far fa-clock" />
+			</div>
+			{numbArr.map((num, i) => (
+				<div key={i}>{num}</div>
+			))}
+		</h1>
+	);
+};
+
+/*Render reacts application*/
+let number = 0;
+
+setInterval(() => {
+	number = number + 1;
+	ReactDOM.render(
+		<Counter number={number.toString()} />,
+		document.querySelector("#app")
+	);
+}, 1000);
