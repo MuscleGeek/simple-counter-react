@@ -18,7 +18,7 @@ const Counter = properties => {
 
 	return (
 		<h1 className="d-flex counterStyle justify-content-center">
-			<div className="styleClock">
+			<div className="styleClock" style={{ background: "black" }}>
 				<i className="far fa-clock" />
 			</div>
 			{numbArr.map((num, i) => (
